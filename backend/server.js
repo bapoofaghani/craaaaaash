@@ -138,7 +138,9 @@ app.get('*', (req, res) => {
 
 // --- شروع سرور ---
 const PORT = process.env.PORT || 4000;
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 // --- Game Loop ---
 // loopUpdate و متغیرها (phase_start_time, live_bettors_table, betting_phase و غیره)
